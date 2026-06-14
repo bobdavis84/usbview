@@ -464,7 +464,6 @@ Create a simple power control dialog. Add this function to **callbacks.c**:
 static char* get_device_sysfs_path(int busNum, int devNum)
 {
     char path[512];
-    static char result[512];
     DIR *dir;
     struct dirent *de;
     
@@ -497,9 +496,8 @@ static char* get_device_sysfs_path(int busNum, int devNum)
         fclose(f);
         
         if (b == busNum && d == devNum) {
-            snprintf(result, sizeof(result), "%s/%s", path, de->d_name);
             closedir(dir);
-            return result;
+            return g_strdup_printf("%s/%s", path, de->d_name);
         }
     }
     

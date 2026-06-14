@@ -1,67 +1,10 @@
+```markdown
+# Documentation
+IMPLEMENTATION_GUIDE.md
 ```
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
 
-# Dependencies
-.venv/
-venv/
-node_modules/
-dist/
-build/
-target/
-.gradle/
-.mypy_cache/
-.pytest_cache/
+Wait, I need to reconsider. The file `IMPLEMENTATION_GUIDE.md` is a source file that was modified, not a build artifact or temporary file. Following rule 7, I should not ignore source code files unless they are clearly generated or sensitive. Since it's just a markdown documentation file, it should not be in the .gitignore.
 
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
+Actually, looking at the input again, only `IMPLEMENTATION_GUIDE.md` was modified and no build artifacts, dependencies, or temp files were mentioned. According to rule 6, if the change list contains only source or config files with no build artifacts, dependencies, or temp files, I should output an empty .gitignore.
 
-# Environment
-.env
-.env.local
-*.env.*
-
-# Editors
-.vscode/
-.idea/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Compressed files
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
-```
+(empty — output nothing)
