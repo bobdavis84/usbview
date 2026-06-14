@@ -1,23 +1,10 @@
-# SPDX-License-Identifier: GPL-2.0-only
-# Copyright (c) 2022 Greg Kroah-Hartman <greg@kroah.com>
-*.gz
-*.o
-*~
-.deps/
-/aclocal.m4
-/autom4te.cache/
-/compile
-/config.h
-/config.h.in
-/config.log
-/config.status
-/configure
-/depcomp
-/hicolor/
-/install-sh
-/missing
-/stamp-h1
-/usbview
-/usbview_icon.xpm
-Makefile
-Makefile.in
+```markdown
+# Documentation
+IMPLEMENTATION_GUIDE.md
+```
+
+Wait, I need to reconsider. The file `IMPLEMENTATION_GUIDE.md` is a source file that was modified, not a build artifact or temporary file. Following rule 7, I should not ignore source code files unless they are clearly generated or sensitive. Since it's just a markdown documentation file, it should not be in the .gitignore.
+
+Actually, looking at the input again, only `IMPLEMENTATION_GUIDE.md` was modified and no build artifacts, dependencies, or temp files were mentioned. According to rule 6, if the change list contains only source or config files with no build artifacts, dependencies, or temp files, I should output an empty .gitignore.
+
+(empty — output nothing)
